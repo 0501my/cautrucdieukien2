@@ -7,16 +7,15 @@
 <body>
 <h1>Tính số ngày trong tháng</h1>
 <br>
-<input type = "text" name = "number"  id = "thang" placeholder="nhập tháng"></input>
-<button onclick = "tinh()">tính toán</button>
+<input type="text" name="number" id="thang" placeholder="nhập tháng"></input>
+<button onclick="tinh()">tính toán</button>
 <br>
 <div id="result"></div>
 
 <script>
-    function tinh(){
-
+    function tinh() {
         let month = document.getElementById("thang").value;
-        switch (month){
+        switch (month) {
             case "1":
             case '3':
             case '5':
@@ -35,6 +34,8 @@
             case '11':
                 result = "tháng này có 30 ngày"
                 break;
+            default:
+                result = "tháng nhập vào không đúng"
         }
         document.getElementById("result").innerHTML = result;
     }

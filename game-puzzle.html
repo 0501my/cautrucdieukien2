@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img{
+        width: 200px;
+        height: 150px;
+        padding: 20px;
+    }
+</style>
+<body>
+<div>
+<img id="img1" src="img/heime.jpg" onclick="changeIm3()">;
+</br>
+<img id="img2" src="img/th.jpg" onclick="changeIm1()">;
+</br>
+<img src="img/tk.jpg" id="img3" onclick="changeIm2()">;
+</div>
+<script>
+let a = 0;
+let b = 0;
+let c = 0;
+let img1 =document.getElementById("img3");
+let img2 = document.getElementById('img1');
+let img3 = document.getElementById('img2');
+function changeIm1() {
+    a++
+    if (a>2){
+        a=0;
+    }
+    img1.src = "img/" + ".ipg"
+    check();
+}
+function changeIm2() {
+    b++
+    if (b>2){
+        b=1;
+    }
+    img2.src = "img/" +".jpg"
+    check();
+}
+function changeIm3() {
+    c++
+    if (c>2){
+        c=2;
+    }
+    img3.src = "img/" +"jpg";
+    check();
+}
+function check(){
+    if (a==b && b==c){
+        im1.style.boxShadow = 'red 4px 4px 9px';
+        im2.style.boxShadow = 'red 4px 4px 9px';
+        im3.style.boxShadow = 'red 4px 4px 9px';
+    }else {
+        im1.style.boxShadow = 'white 4px 4px 9px';
+        im2.style.boxShadow = 'white 4px 4px 9px';
+        im3.style.boxShadow = 'white 4px 4px 9px';
+    }
+}
+</script>
+
+</body>
+</html>
